@@ -1,0 +1,26 @@
+Time Conversion
+Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM
+on a 12-hour clock, and 12:00:00 on a 24-hour clock.
+Input Format
+A single string containing a time in -hour clock format (i.e.: or ), where
+and .
+Output Format
+Convert and print the given time in -hour format, where .
+Sample Input
+07:05:45PM
+Sample Output
+19:05:45
+
+
+
+
+s = input()
+if s[-2:] == "AM" and s[:2] == "12":
+    print( "00" + s[2:-2])
+elif s[-2:] == "AM":
+    print( s[:-2])
+elif s[-2:] == "PM" and s[:2] == "12":
+    print(s[:-2])
+else:
+    print( str(int(s[:2]) + 12) + s[2:8])
