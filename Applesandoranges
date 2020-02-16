@@ -1,0 +1,47 @@
+apples = []
+oranges = []
+c = c1 = 0
+print("Enter the starting point of sam house")
+s = int(input())
+print("Enter the end point of sam house")
+t = int(input())
+print("Enter the location of apple tree")
+a =int(input())
+print("Enter the location of orange tree")
+b = int(input())
+print("How many apples are there")
+m = int(input())
+print("How many oranges are there")
+n = int(input())
+for i in range(m):
+    print("Distances at which the apples falls")
+    dist = int(input())
+    apples.append(dist)
+    print(apples)
+for j in range(n):
+    print("distances at which oranges falls")
+    dist1 = int(input())
+    oranges.append(dist1)
+    print(oranges)
+for k in range(len(apples)):
+    summ = a + apples[k]
+    if summ in range(s, t):
+        c = c+1
+
+    else:
+        c = c
+
+for p in range(len(oranges)):
+    summ1 = b + oranges[p]
+    if summ1 in range(s, t):
+        c1 = c1+1
+
+    else:
+        c1 =c1
+
+print(c)
+print(c1)
+
+
+
+
