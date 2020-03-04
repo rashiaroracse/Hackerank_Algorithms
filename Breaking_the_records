@@ -1,0 +1,18 @@
+n = int(input())
+a = [ ]
+a = list(map(int,input().split()))
+countmax = 0
+countmin = 0
+max = a[0]
+min = a[0]
+for i in range(len(a)):
+    if a[i] > max:
+        countmax += 1
+        max = a[i]
+    if a[i] < min :
+        countmin += 1
+        min = a[i]
+print(countmax,countmin)
+
+
+
